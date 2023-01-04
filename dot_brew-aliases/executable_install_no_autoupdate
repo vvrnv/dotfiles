@@ -1,0 +1,6 @@
+#! /bin/bash
+# alias: brew install_no_autoupdate
+#:  * `install_no_autoupdate` [args...]
+#:    `brew install_no_autoupdate` is an alias for `HOMEBREW_NO_AUTO_UPDATE=1 brew install sl`
+HOMEBREW_NO_AUTO_UPDATE=1 brew install sl $*
+
