@@ -1,0 +1,30 @@
+{
+    "vs-kubernetes": {
+        "vs-kubernetes.helm-path": "/Users/voronov2/.vs-kubernetes/tools/helm/darwin-amd64/helm",
+        "vs-kubernetes.minikube-path": "/Users/voronov2/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
+        "vs-kubernetes.draft-path": "/Users/voronov2/.vs-kubernetes/tools/draft/darwin-amd64/draft",
+        "vscode-kubernetes.minikube-path.mac": "/Users/voronov2/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
+        "vs-kubernetes.crd-code-completion": "disabled",
+        "vs-kubernetes.minikube-show-information-expiration": "2023-05-13T09:09:27.460Z"
+    },
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "redhat.telemetry.enabled": false,
+    "editor.renderControlCharacters": true,
+    "go.toolsManagement.autoUpdate": true,
+    "workbench.startupEditor": "none",
+    "workbench.productIconTheme": "vscode-v1-icons",
+    "yaml.schemas": {
+        "file:///Users/voronov2/.vscode/extensions/docsmsft.docs-yaml-0.2.9/out/yaml-support/toc.schema.json": "/toc\\.yml/i"
+    },
+    "editor.accessibilitySupport": "off",
+    "window.zoomLevel": 1,
+    "editor.fontSize": 15,
+    "workbench.colorTheme": "GitHub Dark",
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontLigatures": true,
+    "editor.cursorSmoothCaretAnimation": true,
+    "workbench.list.smoothScrolling": true,
+    "editor.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true
+}
