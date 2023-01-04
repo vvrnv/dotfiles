@@ -1,0 +1,73 @@
+# If you come from bash you might have to change your $PATH.
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=~/.local/bin:$PATH
+# Path to your oh-my-zsh installation.
+export ZSH="/Users/voronov2/.oh-my-zsh"
+
+ZSH_THEME="robbyrussell"
+
+# Which plugins would you like to load?
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(
+	git
+	zsh-kubectl-prompt
+	zsh-autosuggestions
+	sublime
+        )
+
+source $ZSH/oh-my-zsh.sh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# User configuration
+
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+export GOPATH=/Users/voronov2/go
+export PATH=$GOPATH/bin:$PATH
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+export PATH="/Library/Frameworks/Python.framework/Versions/3.9/bin:${PATH}"
+export PATH=/usr/local/share/python:$PATH
+
+export HOMEBREW_NO_AUTO_UPDATE=1
+export ANSIBLE_NOCOWS=1
+
+source ~/.zsh_aliases
+
+[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+[[ /usr/local/bin/helm ]] && source <(helm completion zsh) 
+export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/terraform terraform
+
+autoload -Uz compinit
+compinit
+source <(velero completion zsh)
+
+#az cli autocomplete
+source /usr/local/etc/bash_completion.d/az
+
+complete -o nospace -C /usr/local/bin/vault vault
+
+compdef kubecolor=kubectl
+
+function right_prompt() {
+  local color="green"
+
+  if [[ "$ZSH_KUBECTL_USER" =~ "production" ]]; then
+    color=red
+  fi
+
+  echo "%{$fg[$color]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}"
+}
+export RPROMPT='$(right_prompt)'
+

@@ -1,0 +1,6 @@
+alias python=/usr/local/bin/python3.9
+
+complete -C /usr/local/bin/terraform terraform
+. "$HOME/.cargo/env"
+
+complete -C /usr/local/bin/vault vault

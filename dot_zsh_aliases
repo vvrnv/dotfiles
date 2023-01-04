@@ -1,0 +1,18 @@
+# python
+alias python=/usr/local/bin/python3
+
+# git
+alias g="git"
+alias gs="git status"
+alias ga="git add --all"
+alias gcm="git checkout master"
+alias gc="git commit"
+alias gp="git push"
+alias gpf="git push --force"
+
+# kubectl
+alias k="kubecolor"
+alias kubectl="kubecolor"
+
+# neofetch
+alias neofetch="neofetch --iterm2  /Users/voronov2/Desktop/pictures/neofetch-iterm2.png"
